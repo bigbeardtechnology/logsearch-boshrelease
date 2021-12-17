@@ -19,3 +19,6 @@ rm -rf /var/vcap/packages/elasticsearch/plugins/*
     /var/vcap/packages/elasticsearch/bin/elasticsearch-plugin install -b "<%= path %>"
   <% end %>
 <% end %>
+
+# allow vcap user to access es packaged jdk
+chown -RL vcap /var/vcap/packages/elasticsearch
