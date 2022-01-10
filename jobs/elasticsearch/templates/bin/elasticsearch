@@ -25,8 +25,8 @@ export ES_PATH_CONF=${JOB_DIR}/config
 export MAX_OPEN_FILES=<%= p("elasticsearch.limits.fd") %>
 export MAX_LOCKED_MEMORY=unlimited  # required to enable elasticsearch's mlockall setting
 
-source /var/vcap/packages/openjdk-11/bosh/runtime.env
-export ES_JAVA_HOME=$JAVA_HOME
+export ES_JAVA_HOME=/var/vcap/packages/elasticsearch/jdk
+export JAVA_HOME=/var/vcap/packages/elasticsearch/jdk
 
 ulimit -u 4096
 
