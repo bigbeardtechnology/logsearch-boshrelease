@@ -1,5 +1,6 @@
 ---
 name: elasticsearch
-
+dependencies:
+  - openjdk-11
 files:
-  - elasticsearch/elasticsearch-7.6.1-linux-x86_64.tar.gz
+  - elasticsearch/elasticsearch-7.16.2-linux-x86_64.tar.gz
