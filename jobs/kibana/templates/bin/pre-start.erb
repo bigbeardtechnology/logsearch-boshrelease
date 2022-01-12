@@ -5,4 +5,4 @@ if ! [[ $(ls -1 /var/vcap/packages/kibana/plugins | wc -l) == 0 ]]; then
 fi
 
 cd /var/vcap/packages/kibana
-chown -R vcap:vcap optimize config data plugins
+chown -R vcap:vcap config data plugins
