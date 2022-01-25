@@ -2,4 +2,4 @@
 name: elasticsearch
 
 files:
-  - elasticsearch/elasticsearch-7.16.2-linux-x86_64.tar.gz
+  - elasticsearch/elasticsearch-7.16.3-linux-x86_64.tar.gz
