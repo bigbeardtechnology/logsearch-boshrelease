@@ -45,8 +45,8 @@ kibana/kibana-6.8.23-linux-x86_64.tar.gz:
   size: 200352626
   sha: sha256:d5e344dc30b1fa5cce974ada1abbf09c3d00f333a75c189a10c6be1a181b3e59
 logstash/logstash-6.8.23.tar.gz:
-  size: 18212780
-  sha: sha256:9d3dea3086da29aa46ad6d2ba3b270ac08191bfee02797357faf7dbd9e6cba2c
+  size: 351290603
+  sha: sha256:173894e917fbdb8b95fa693f474e836987bcd455f10aaa038e6b237b65b77acc
 logstash/logstash-filter-alter-3.0.2.zip:
   size: 7425
   object_id: 543e5010-6449-400b-489d-31b82dcb4670
