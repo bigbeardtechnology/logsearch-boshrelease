@@ -1,2 +1,19 @@
 #!/usr/bin/env bash
 sysctl -q -w vm.max_map_count=262144
+
+mkdir -p /var/vcap/packages/elasticsearch/plugins
+
+# install plugins
+rm -rf /var/vcap/packages/elasticsearch/plugins/*
+<% if_p('elasticsearch.cloud.aws.access_key', 'elasticsearch.cloud.aws.secret_key') do %>
+  /var/vcap/packages/elasticsearch/bin/elasticsearch-plugin install -b repository-s3
+<% end %>
+<% p("elasticsearch.plugins").each do |plugin| name, path = plugin.first %>
+  <% if path.start_with? '/var/vcap' %>
+    /var/vcap/packages/elasticsearch/bin/elasticsearch-plugin install "file://<%= path %>"
+  <% elsif path.start_with? 'http' %>
+    /var/vcap/packages/elasticsearch/bin/elasticsearch-plugin install "<%= path %>"
+  <% else %>
+    /var/vcap/packages/elasticsearch/bin/elasticsearch-plugin install "<%= path %>"
+  <% end %>
+<% end %>
