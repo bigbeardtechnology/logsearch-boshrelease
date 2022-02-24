@@ -2,6 +2,7 @@
 name: logstash
 
 dependencies:
+  - ruby-2.4-r5
   - openjdk-8
 
 files:
@@ -11,3 +12,4 @@ files:
   - logstash/logstash-input-relp-3.0.2.zip
   - logstash/logstash-input-syslog-3.2.2.zip
   - logstash/logstash-output-syslog-3.0.5.zip
+  - ruby/rake-12.3.2.gem
